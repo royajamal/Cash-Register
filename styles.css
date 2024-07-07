@@ -39,67 +39,68 @@ header {
   border-radius:8px;
 }
 
-  #touchPad{
-    width:150px;
-    height:150px;
-    background-color:#31618c;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
-    padding:10px;
-    border-radius:10px;
-    margin-bottom:20px;
-  }
-  
-  .key{
-    width:30px;
-    height:40px;
-    background-color:#4a90e2;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    border-radius:50%;
-    margin-bottom:10px;
-    font-size:12px;
-  }
-  
-  #tiroirCaisse {
-      text-align: center;
-      margin-top: 10px; 
-      background-color:#1f497d;
-      width:30%;
-      padding:10px;
-      border-radius:5px;
-      display:flex;
-      justify-content: center;
-  }
-  #buttonBlack{
-    position:relative;
-    width:10px;
-    height:10px;
-    background-color:#000000;
-    border-radius:50%;
-    left: calc(50% -10px);
-    visibility:visible;
+#touchPad{
+  width:150px;
+  height:150px;
+  background-color:#31618c;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  padding:10px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+
+.key{
+  width:30px;
+  height:40px;
+  background-color:#4a90e2;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  border-radius:50%;
+  margin-bottom:10px;
+  font-size:12px;
+}
+
+#tiroirCaisse {
+  text-align: center;
+  margin-top: 10px; 
+  background-color:#1f497d;
+  width:30%;
+  padding:10px;
+  border-radius:5px;
+  display:flex;
+  justify-content: center;
+}
+
+#buttonBlack{
+  position:relative;
+  width:10px;
+  height:10px;
+  background-color:#000000;
+  border-radius:50%;
+  left: calc(50% -10px);
+  visibility:visible;
   border: 1px solid pink
+}
+
+@media (max-width: 600px) {
+  #container {
+    padding: 10px; 
   }
 
-  @media (max-width: 600px) {
-    #container {
-        padding: 10px; 
-    }
+  #caisse {
+    padding: 15px;
+  }
 
-    #caisse {
-        padding: 15px;
-    }
+  #touchPad {
+    padding: 5px; 
+  }
 
-    #touchPad {
-        padding: 5px; 
-    }
-
-    .key {
-        width: 25px;
-        height: 30px;
-        font-size: 10px; 
-    }
+  .key {
+    width: 25px;
+    height: 30px;
+    font-size: 10px; 
+  }
 }
