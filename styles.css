@@ -27,7 +27,7 @@ header {
   align-items: center;
 }
 
-#container-label {
+#container-label > *  {
   margin-bottom: 10px;
 }
 
@@ -80,7 +80,7 @@ header {
   height: 10px;
   background-color: #000;
   border-radius: 50%;
-  left: calc(50% -10px);
+  left: calc(50%, -10px);
   visibility: visible;
   border: 1px solid pink;
 }
@@ -103,5 +103,4 @@ header {
     height: 30px;
     font-size: 10px;
   }
-
 }
