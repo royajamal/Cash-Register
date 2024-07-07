@@ -84,3 +84,23 @@ body{
     visibility:visible;
   border: 1px solid pink
   }
+
+  @media (max-width: 600px) {
+    #container {
+        padding: 10px; 
+    }
+
+    #caisse {
+        padding: 15px;
+    }
+
+    #touchPad {
+        padding: 5px; 
+    }
+
+    .key {
+        width: 25px;
+        height: 30px;
+        font-size: 10px; 
+    }
+}
