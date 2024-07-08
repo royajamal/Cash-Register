@@ -35,6 +35,9 @@ Modify as needed: If you'd like to customize the documentation page or add your 
 
 Share and contribute: If you find this project helpful, consider sharing it with others. You can also contribute to the project by submitting bug reports, feature requests, or pull requests to improve it for everyone.
 
+# Live
+- https://royajamal.github.io/Cash-Register/
+
 # Author 👩‍💻 
 - GitHub: (https://github.com/royajamal/)
 - LinkedIn:(https://www.linkedin.com/in/roya-jamal) 
