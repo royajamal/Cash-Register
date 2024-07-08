@@ -1,23 +1,7 @@
 const price = 19.5;
 const cid = [['PENNY', 1.01], ['NICKEL', 2.05], ['DIME', 3.1], ['QUARTER', 4.25], ['ONE', 90], ['FIVE', 55], ['TEN', 20], ['TWENTY', 60], ['ONE HUNDRED', 100]];
 
-document.getElementById('purchase-btn').addEventListener('click', () => {
-  const cash = parseFloat(document.getElementById('cash').value);
-  const changeDue = cash - price;
-  const change = calculateChange(changeDue, cid);
-
-  if (cash < price) {
-    alert('Customer does not have enough money to purchase the item');
-  } else if (cash === price) {
-    document.getElementById('change-due').innerText = 'No change due - customer paid with exact cash';
-  } else if (change.status === 'INSUFFICIENT_FUNDS') {
-    document.getElementById('change-due').innerText = 'Status: INSUFFICIENT_FUNDS';
-  } else if (change.status === 'CLOSED') {
-    document.getElementById('change-due').innerText = `Status: CLOSED ${formatChange(change.change)}`;
-  } else {
-    document.getElementById('change-due').innerText = `Status: OPEN ${formatChange(change.change)}`;
-  }
-});
+// Function definitions
 
 function calculateChange(changeDue, cid) {
   const change = [];
@@ -72,5 +56,24 @@ function calculateChange(changeDue, cid) {
 }
 
 function formatChange(change) {
-  return change.map(item => `${item[0]}: $${item[1].toFixed(2)}`).join(' ');
+  return change.map((item) => `${item[0]}: $${item[1].toFixed(2)}`).join(' ');
 }
+
+// Event listener
+document.getElementById('purchase-btn').addEventListener('click', () => {
+  const cash = parseFloat(document.getElementById('cash').value);
+  const changeDue = cash - price;
+  const change = calculateChange(changeDue, cid);
+
+  if (cash < price) {
+    alert('Customer does not have enough money to purchase the item');
+  } else if (cash === price) {
+    document.getElementById('change-due').innerText = 'No change due - customer paid with exact cash';
+  } else if (change.status === 'INSUFFICIENT_FUNDS') {
+    document.getElementById('change-due').innerText = 'Status: INSUFFICIENT_FUNDS';
+  } else if (change.status === 'CLOSED') {
+    document.getElementById('change-due').innerText = `Status: CLOSED ${formatChange(change.change)}`;
+  } else {
+    document.getElementById('change-due').innerText = `Status: OPEN ${formatChange(change.change)}`;
+  }
+});
